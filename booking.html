@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>The Grill House | Book a Table</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>The Grill House</h1>
+  <p>Great Food. Great Time</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="menu.html">Menu</a>
+    <a href="booking.html">Book a Table</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Book a Table🍽️</h2>
+    <p>Planning a meal with friends or family? Complete the form below to
+      request a table at The Grill House.</p>
+
+    <form id="bookingForm">
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="date">Booking Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Booking Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="guests">Number of Guests:</label>
+      <select id="guests" name="guests" required>
+        <option value=" ">Select number of guests</option>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+        <option value="5">5 Guests</option>
+        <option value="6">6 Guests</option>
+        <option value="7+">7 or more Guests</option>
+      </select>
+
+      <label for="message">Special Request</label>
+      <textarea id="message" name="message"
+                placeholder="Birthday celebration, seating request, etc"></textarea>
+
+      <button type="submit">Request Booking</button>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 The Grill House. All rights reserved</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

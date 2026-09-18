@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>The Grill House | Enquiry</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>The Grill House</h1>
+  <p>Great Food. Great Time</p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="menu.html">Menu</a>
+    <a href="booking.html">Book a Table</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Make an Enquiry 📩</h2>
+
+    <p>Have a question about our menu, group bookings, celebrations
+      or special events? Send us an enquiry and out team will be happy
+      to assist you.</p>
+
+    <form id="enquiryForm">
+
+      <label for="enquiry-name">Full Name:</label>
+      <input type="text" id="enquiry-name" name="name" required>
+
+      <label for="enquiry-email">Email Address:</label>
+      <input type="email" id="enquiry-email" name="email" required>
+
+      <label for="enquiry-phone">Phone Number:</label>
+      <input type="tel" id="enquiry-phone" name="phone">
+
+      <label for="enquiry-type">Type of Enquiry:</label>
+      <select id="enquiry-type" name="enquiry-type" required>
+        <option value=" ">Select an option></option>
+        <option value="menu">Menu Enquiry</option>
+        <option value="group">Group Booking</option>
+        <option value="birthday">Birthday Celebration</option>
+        <option value="event">Special Event</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="enquiry-message">Your Enquiry:</label>
+      <textarea id="enquiry-message" name="message"
+                placeholder="Tell us how we can help..." required></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 The Grill House. All rights reserved</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

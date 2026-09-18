@@ -1,0 +1,153 @@
+/* The Grill House */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #1b1b1b;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #f4a261;
+  font-size: 18px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #f4a261;
+}
+
+/* Main content */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+p{
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+main a {
+  display: inline-block;
+  background-color: #b7472a;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px 10px 10px 0;
+  border-radius: 5px;
+}
+
+main a:hover {
+  background-color: #8f321d;
+}
+
+/* Footer */
+footer {
+  background-color: #1b1b1b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Booking Form */
+
+form {
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background-color: #b7472a;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8f321d;
+}
+
+/* Home page image */
+
+.hero {
+  margin-bottom: 30px;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
