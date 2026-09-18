@@ -58,7 +58,35 @@ Home
 - Added JavaScript confirmation messages.
 - Added restaurant image and other visual elements.
 
+### Version 2.0 - Part 2
+- Improved website styling using CSS.
+- Added Flexbox for navigation layout.
+- Added responsive tablet and mobile breakpoints.
+- Added relative units such as rem and percentages.
+- Added focus and active states for interaction elements.
+- Added responsive images using srcset and sizes.
+- Tested the website on mobile, tablet and desktop screen sizes.
+- Added responsive testing screenshots to the README.
+
 ## References
 - Pexels – Restaurant image by Mohamed Olwy.
 - MDN Web Docs – HTML, CSS, JavaScript and accessibility resources.
 - Figma – Wireframing and website design guidance.
+
+## Part 2 References
+- MDN Web Docs - CSS Media Queries.
+- MDN Web Docs - CSS Flexible Box Layout (Flexbox).
+- MDN Web Docs - Responsive Images using srcset and sizes.
+
+## Responsive Design Testing
+The website was tested at different screen sizes to ensure that the layout, navigation, images and content display correctly on mobile, tablet and desktop devices.
+
+### Mobile View
+![Mobile View](images/screenshots/mobile-view.png)
+
+### Tablet View
+![Tablet View](images/screenshots/tablet-view.png)
+
+### Desktop View
+![Desktop View](images/screenshots/desktop-view.png)
+
