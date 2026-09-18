@@ -1,5 +1,11 @@
 # The Grill House
 
+## Student Information
+Name: Chuma Molatlhwe
+Student Number: ST10514926
+Module: WEDE5020
+Project: POE
+
 ## Project Overview
 The Grill House is a bar and grill restaurant website developed for the WEDE5020 POE. The website provides customers with information about the restaurant, its menu, table bookings, enquiries and contact details.
 
