@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Grill House | Enquiry</title>
+
+  <meta name="description"
+        content="Contact The Grill House with questions about our menu, group bookings, birthday celebrations and special events.">
+  <meta name="keywords"
+        content="The Grill House, restaurant enquiries, group bookings, special events">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -33,7 +38,7 @@
       or special events? Send us an enquiry and out team will be happy
       to assist you.</p>
 
-    <form id="enquiryForm">
+    <form id="enquiryForm" novalidate>
 
       <label for="enquiry-name">Full Name:</label>
       <input type="text" id="enquiry-name" name="name" required>
@@ -57,6 +62,11 @@
       <label for="enquiry-message">Your Enquiry:</label>
       <textarea id="enquiry-message" name="message"
                 placeholder="Tell us how we can help..." required></textarea>
+
+      <p id="enquiryError" role="alert"
+         style="color: red;"></p>
+
+      <p id="enquiryResult" role="status"></p>
 
       <button type="submit">Submit Enquiry</button>
     </form>

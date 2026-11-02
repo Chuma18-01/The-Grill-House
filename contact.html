@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Grill House | Contact Us</title>
 
+  <meta name="description"
+        content="Get in touch with The Grill House. View our contact information, opening hours, interactive map and online contact form.">
+  <meta name="keywords"
+        content="The Grill House, contact restaurant, restaurant opening hours, Cape Town">
+
   <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 </head>
 
 <body>
@@ -45,6 +54,10 @@
     <h3>✉️ Email</h3>
     <p>info@thegrillhouse.co.za</p>
   </section>
+     <h2>Find Us</h2>
+     <p>Explore our location on the map below</p>
+
+  <div id="restaurantMap"></div>
 
   <section>
     <h2>Opening Hours</h2>
@@ -57,16 +70,34 @@
   <section>
     <h2>Send Us a Message</h2>
 
-      <form>
+      <form id="contactForm"
+            action="https://formspree.io/f/xaeelwzv"
+            method="POST"
+            novalidate>
         <label for="contact-name">Full Name:</label>
         <input type="text" id="contact-name" name="name" required>
 
         <label for="contact-email">Email Address:</label>
         <input type="email" id="contact-email" name="email" required>
 
+        <label for="contact-type">Type of Message:</label>
+        <select id="contact-type" name="messageType" required>
+          <option value="">Select a message type</option>
+          <option value="general">General Enquiry</option>
+          <option value="feedback">Feedback</option>
+          <option value="complaint">Complaint</option>
+          <option value="compliment">Compliment</option>
+          <option value="other">Other</option>
+        </select>
+
         <label for="contact-message">Message:</label>
         <textarea id="contact-message" name="message"
                   placeholder="Type your message here..." required></textarea>
+
+        <p id="contactError" role="alert"
+           style="color: red;"></p>
+
+        <p id="contactResult" role="status"></p>
 
         <button type="submit">Send Message</button>
       </form>
@@ -77,6 +108,9 @@
 <footer>
   <p>&copy; 2026 The Grill House. All rights reserved</p>
 </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

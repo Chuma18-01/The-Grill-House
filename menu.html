@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-  <title>The Grill House | Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu in Cape Town | The Grill House </title>
+
+  <meta name="description"
+        content="Explore The Grill House menu, featuring juicy burgers, grilled steaks,
+                 BBQ ribs, chicken, sides and refreshing drinks. ">
+
+  <meta name="keywords"
+        content="The Grill House, restaurant menu, Cape Town restaurant, burgers,
+                 grilled steak, BBQ ribs, chicken.">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,6 +38,26 @@
     <h2>Our Menu 🍽️</h2>
     <p>From flame-grilled favourites to refreshing drinks, there is something
     for everyone at The Grill House</p>
+  </section>
+
+  <section>
+    <h2>Search Our Menu</h2>
+
+    <label for="menuSearch">Search for a dish:</label>
+    <input type="search" id="menuSearch"
+           placeholder="Search burgers, steak, drinks...">
+
+    <label for="categoryFilter">Filter by category:</label>
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="burgers">Burgers</option>
+      <option value="grill">From the Grill</option>
+      <option value="sides">Starters and Sides</option>
+      <option value="drinks">Drinks</option>
+    </select>
+
+    <p id="searchCount" role="status"></p>
+    <div id="menuResults" class="menu-results"></div>
   </section>
 
   <section>
@@ -90,14 +118,64 @@
     <P>Choose from our wide range of beers</P>
 
     <h3>Milkshakes - R50</h3>
-    <p>Chocolate, vanilla, strawberry, bar one or oreo</p>
+    <p>Chocolate, vanilla, strawberry, bar one or oreo </p>
   </section>
 
+<!-- Food Gallery -->
+  <section>
+    <h2>Our Food Gallery</h2>
+    <p>Click on any image to view it in a larger size.</p>
+
+    <div class="food-gallery">
+      <img src="img/burger.jpg"
+           alt="Classic beef burger with chips"
+           class="gallery-image"
+           loading="lazy"
+           decoding="async"
+           tabindex="0">
+
+      <img src="img/steak.jpg"
+           alt="Grilled steak with chips and salad"
+           class="gallery-image"
+           loading="lazy"
+           decoding="async"
+           tabindex="0">
+
+      <img src="img/ribs.jpg"
+           alt="BBQ ribs served with chips"
+           class="gallery-image"
+           loading="lazy"
+           decoding="async"
+           tabindex="0">
+
+      <img src="img/chicken.jpg"
+           alt="Grilled chicken meal"
+           class="gallery-image"
+           loading="lazy"
+           decoding="async"
+           tabindex="0">
+
+    </div>
+  </section>
+
+  <!-- Image Lightbox -->
+  <div id="lightbox"
+       class="lightbox"
+       role="dialog" aria-modal="true"
+       aria-label="Enlarged food image"
+       hidden>
+    <button id="closeLightbox"
+            type="button" aria-label="Close enlarged image">
+    </button>
+    <img id="lightboxImage" src="" alt="">
+
+  </div>
 </main>
 
 <footer>
   <p>&copy; 2026 The Grill House. All rights reserved.</p>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
