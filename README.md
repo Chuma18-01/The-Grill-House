@@ -204,9 +204,28 @@ Correction:
   https://developers.google.com/search/docs
   Accessed: 02 November 2026
 
-- Pexels. Food photography used on the website.
-  https://www.pexels.com/
-  Accessed: 02 November 2026
+### Food Gallery References
+### Food Gallery Image References
+
+1. Pexels. (n.d.). Classic Beef Burger Photograph.
+   Photographer: HACI HÜSEYİN EROL
+   Available at: https://www.pexels.com/photo/cheeseburger-and-fries-on-fast-food-tray-36007382/
+   Accessed: 02 November 2026.
+
+2. Pexels. (n.d.). Grilled Steak Photograph.
+   Photographer: Leo Luz Fotografia
+   Available at: https://www.pexels.com/photo/grilled-steak-with-fries-and-salad-on-black-plate-40646435/
+   Accessed: 02 November 2026.
+
+3. Pexels. (n.d.). BBQ Ribs Photograph.
+   Photographer: Jimmy Ramírez
+   Available at: https://www.pexels.com/photo/meat-ribs-and-potato-chips-in-a-strainer-14044646/
+   Accessed: 02 November 2026.
+
+4. Pexels. (n.d.). Grilled Chicken Photograph.
+   Photographer: Nano Erdozain
+   Available at: https://www.pexels.com/photo/a-tray-of-chicken-fries-and-salad-with-dressing-27643007/
+   Accessed: 02 November 2026.
 
 ## Performance and SEO Testing - Part 3
 
