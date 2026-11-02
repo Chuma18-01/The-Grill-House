@@ -11,6 +11,21 @@ The Grill House is a bar and grill restaurant website developed for the WEDE5020
 The website provides customers with information about the restaurant, its menu, table bookings,
 enquiries and contact details.
 
+## Website Deployment
+The Grill House website is published using GitHub Pages.
+
+**Live Website:**
+https://chuma18-01.github.io/The-Grill-House/
+
+**GitHub Repository:**
+https://github.com/chuma18-01/The-Grill-House
+
+**Deployment Platform:** GitHub Pages
+
+The website is accessible online and includes an
+interactive map, food gallery lightbox, dynamic menu
+search, form validation and SEO improvements.
+
 ## Website Goals and Objectives
 - Create a simple and user-friendly restaurant website.
 - Provide easy access to menu and restaurant information.
@@ -152,6 +167,12 @@ The following improvements were made to help search engines understand the websi
 The sitemap URLs will be updated after the website is deployed.
 
 ## Part 3 Changelog
+### Final Deployment Updates
+
+- Published the website using GitHub Pages.
+- Updated sitemap.xml with the live website URLs.
+- Updated robots.txt to reference the published sitemap.
+- Added the GitHub repository and live website links to README.md.
 
 ### Version 3.0 - Final POE
 
@@ -204,7 +225,6 @@ Correction:
   https://developers.google.com/search/docs
   Accessed: 02 November 2026
 
-### Food Gallery References
 ### Food Gallery Image References
 
 1. Pexels. (n.d.). Classic Beef Burger Photograph.
