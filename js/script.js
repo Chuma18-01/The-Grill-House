@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const enquiryForm = document.getElementById("enquiryForm");
 
   if (enquiryForm) {
-    enquiryForm.addEventListener("submit", function (event) {
+    enquiryForm.addEventListener("submit", async function (event) {
 
       // Stop the page from refreshing
       event.preventDefault();
@@ -43,36 +43,147 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const response = type === "menu"
-            ? "Please visit our menu page for more information."
-            : type === "group" || type === "birthday" || type === "event"
-            ? "Thank you! Our team will need to go confirm availability and pricing for your event."
-            : "Thank you! Your enquiry details have been checked.";
+  const submitButton = enquiryForm.querySelector('button[type="submit"]');
 
-     result.textContent = response +
-            "This is a demo response. No enquiry has been sent.";
+  submitButton.disabled = true;
+  result.textContent = "Sending your enquiry...";
 
-      //Clear the form
-      enquiryForm.reset();
+  try {
+      const response = await fetch(enquiryForm.action, {
+          method: "POST",
+          body: new FormData(enquiryForm),
+          headers: {
+              "Accept": "application/json"
+          }
+      });
+
+      if (response.ok) {
+          const messages = {
+              menu: "Thank you! Your menu enquiry has been submitted.",
+              group: "Thank you! Your group booking enquiry has been submitted. Availability and pricing still need confirmation.",
+              birthday: "Thank you! Your birthday celebration enquiry has been submitted. Arrangements still need confirmation.",
+              event: "Thank you! Your special event enquiry has been submitted. Our team will need to confirm availability and pricing.",
+              other: "Thank you! Your enquiry has been submitted successfully."
+          };
+
+          result.textContent = messages[type] || messages.other;
+          enquiryForm.reset();
+      } else {
+          result.textContent = "";
+          error.textContent = response.status === 429
+              ? "Too many submissions. Please try again later."
+              : "Your enquiry could not be sent. Please try again.";
+      }
+  } catch (err) {
+      result.textContent = "";
+      error.textContent =
+          "Connection error. Please check your internet and try again.";
+  } finally {
+      submitButton.disabled = false;
+  }
     });
   }
 });
 
-// Booking Form
+// Booking Form - The Grill House
+document.addEventListener("DOMContentLoaded", function () {
+    const bookingForm = document.getElementById("bookingForm");
 
-const bookingForm = document.getElementById("bookingForm");
+    if (!bookingForm) return;
 
-if (bookingForm) {
-  bookingForm.addEventListener("submit", function (event) {
+    const error = document.getElementById("bookingError");
+    const result = document.getElementById("bookingResult");
+    const dateInput = bookingForm.querySelector("#date");
 
-    event.preventDefault();
+    // Prevent selecting past dates
+    const today = new Date();
+    const localToday = [
+        today.getFullYear(),
+        String(today.getMonth() + 1).padStart(2, "0"),
+        String(today.getDate()).padStart(2, "0")
+    ].join("-");
 
-    alert("Thank you! Your table booking request has been submitted successfully.");
+    dateInput.min = localToday;
 
-    bookingForm.reset();
+    bookingForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-  });
-}
+        error.textContent = "";
+        result.textContent = "";
+
+        const name = bookingForm.elements["name"].value.trim();
+        const email = bookingForm.elements["email"].value.trim();
+        const phone = bookingForm.elements["phone"].value.trim();
+        const date = bookingForm.elements["date"].value;
+        const time = bookingForm.elements["time"].value;
+        const guests = bookingForm.elements["guests"].value;
+
+        if (name.length < 2) {
+            error.textContent = "Please enter your full name.";
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            error.textContent = "Please enter a valid email address.";
+            return;
+        }
+
+        if (!/^\d{10}$/.test(phone.replace(/\s/g, ""))) {
+            error.textContent = "Please enter a valid 10-digit phone number.";
+            return;
+        }
+
+        if (!date || date < localToday) {
+            error.textContent = "Please select a valid future booking date.";
+            return;
+        }
+
+        if (!time) {
+            error.textContent = "Please select a booking time.";
+            return;
+        }
+
+        if (!guests) {
+            error.textContent = "Please select the number of guests.";
+            return;
+        }
+
+        const submitButton = bookingForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        submitButton.disabled = true;
+        result.textContent = "Sending your booking request...";
+
+        try {
+            const response = await fetch(bookingForm.action, {
+                method: "POST",
+                body: new FormData(bookingForm),
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                result.textContent =
+                    "Thank you! Your booking request has been sent. " +
+                    "Our team will need to confirm availability.";
+
+                bookingForm.reset();
+            } else {
+                result.textContent = "";
+                error.textContent =
+                    "Your booking request could not be sent. Please try again.";
+            }
+        } catch (err) {
+            result.textContent = "";
+            error.textContent =
+                "Connection error. Please check your internet and try again.";
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
+});
 
 // Contact Form Validation
 document.addEventListener("DOMContentLoaded", function () {

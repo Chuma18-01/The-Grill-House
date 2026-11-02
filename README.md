@@ -167,6 +167,16 @@ The following improvements were made to help search engines understand the websi
 The sitemap URLs will be updated after the website is deployed.
 
 ## Part 3 Changelog
+### Final Form Improvements
+
+- Integrated the enquiry form with Formspree.
+- Added asynchronous enquiry submissions using JavaScript.
+- Integrated the booking form with Formspree.
+- Added booking form validation for customer details, dates and guest numbers.
+- Added success and error messages for form submissions.
+- Tested all three forms and confirmed submissions in Formspree.
+- Booking requests require confirmation of availability.
+
 ### Final Deployment Updates
 
 - Published the website using GitHub Pages.
