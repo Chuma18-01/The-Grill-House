@@ -99,7 +99,7 @@ Home
   Accessed: 16 September 2026.
 
 - Pexels. Restaurant photography by Mohamed Olwy.
-  Available at: ![grill-food.jpg.jpg](img/grill-food.jpg.jpg)
+  Available at: https://www.pexels.com/photo/juicy-grilled-steaks-on-flaming-barbecue-36782590/
   Accessed:  17 September 2026.
 
 - MDN Web Docs. HTML, CSS and JavaScript documentation.
@@ -163,8 +163,6 @@ The following improvements were made to help search engines understand the websi
 - Created robots.txt to allow search engine crawling.
 - Created sitemap.xml to list the six website pages.
 - Used responsive design to support mobile and desktop devices.
-
-The sitemap URLs will be updated after the website is deployed.
 
 ## Part 3 Changelog
 ### Final Form Improvements
